@@ -1,0 +1,58 @@
+### api call for create user
+post http://127.0.0.1:8000/user
+Content-Type: application/json
+
+{
+    "username":"mbappe",
+    "email":"mbappe@gmail.com",
+    "password":",mbappe123"
+}
+# __________________________________________________
+
+
+### api call for add exp
+post http://127.0.0.1:8000/exp
+Content-Type: application/json
+Authorization: Basic ronaldo:ronaldo123
+
+{
+    "title":"mandi",
+    "amount":"888888",
+    "category":"food",
+    "payment":"UPI"
+}
+
+### api call for list exp
+get http://127.0.0.1:8000/exp
+Authorization: Basic shahil:shahil123
+
+### api call for retrive exp
+get http://127.0.0.1:8000/rud/5
+Authorization: Basic shahil:shahil123
+
+### api call for update exp
+patch http://127.0.0.1:8000/rud/5
+Content-Type: application/json
+Authorization: Basic shahil:shahil123
+
+{
+  "payment":"UPI"
+}
+
+
+### api call for delete exp
+delete http://127.0.0.1:8000/rud/1
+Authorization: Basic shahil:shahil123
+
+
+### api call for title search
+get http://127.0.0.1:8000/exp?title=private jet
+Authorization: Basic ronaldo:ronaldo123
+
+### api call for category payment search
+get http://127.0.0.1:8000/exp?search=UPI
+Authorization: Basic ronaldo:ronaldo123
+
+### api call for ordering by amount,date
+get http://127.0.0.1:8000/exp?ordering=amount
+Authorization: Basic ronaldo:ronaldo123
